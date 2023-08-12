@@ -1,1 +1,39 @@
+body {
+    background-color: #F9F7F7;
+    font-family: Verdana, sans-serif;
+}
 
+h1.h1-heading {
+    font-size: 40px;
+    text-align: center;
+    color: #112D4E;
+}
+
+button.grid-size-button {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+    font-weight: bold;        
+    color: #112D4E;
+    background-color: #F9F7F7;
+    border: 4px solid #112D4E;
+    border-radius: 6px;
+    padding: 5px 10px;
+}
+
+div.button-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+div.grid-container {
+    background-color: #DBE2EF;
+    box-shadow: 6px 6px #3F72AF;
+    height: 500px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    height: 800px;
+    padding: 20px;
+}
