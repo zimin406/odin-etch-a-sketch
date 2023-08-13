@@ -28,7 +28,10 @@ function adjustGridSize(grid) {
 
 function paintCell(event) {
     const cell = event.target;
-    cell.style.backgroundColor = "rgb(0, 0, 0)";
+    const cellR = Math.floor(Math.random() * 256);
+    const cellG = Math.floor(Math.random() * 256);
+    const cellB = Math.floor(Math.random() * 256);
+    cell.style.backgroundColor = `rgb(${cellR}, ${cellG}, ${cellB})`;    
 }
 
 gridSizeButton.addEventListener("click", (event) => {
