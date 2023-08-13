@@ -21,8 +21,14 @@ function adjustGridSize(grid) {
         cell.style.boxSizing = "border-box";
         cell.style.border = "0.5px solid #112D4E";
         smallContainer.appendChild(cell);
+        cell.addEventListener("mouseover", paintCell);
         }
     }
+}
+
+function paintCell(event) {
+    const cell = event.target;
+    cell.style.backgroundColor = "rgb(0, 0, 0)";
 }
 
 gridSizeButton.addEventListener("click", (event) => {
