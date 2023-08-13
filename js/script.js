@@ -17,7 +17,7 @@ function adjustGridSize(grid) {
         const cell = document.createElement("div");
         cell.style.width = `${gridSize}px`;
         cell.style.height = `${gridSize}px`;
-        cell.style.backgroundColor = "#F9F7F7";
+        cell.style.backgroundColor = `rgb(255, 255, 255)`;
         cell.style.boxSizing = "border-box";
         cell.style.border = "0.5px solid #112D4E";
         smallContainer.appendChild(cell);
@@ -28,7 +28,11 @@ function adjustGridSize(grid) {
 
 function paintCell(event) {
     const cell = event.target;
-    cell.style.backgroundColor = "rgb(0, 0, 0)";
+    const cellStyle = window.getComputedStyle(cell);
+    const cellColor = cellStyle.backgroundColor;
+    const cellRGB = cellColor.slice(4, -1).split(",").map((x) => +x);
+    const newCellRGB = cellRGB.map((x) => x - 25);
+    cell.style.backgroundColor = `rgb(${newCellRGB[0]}, ${newCellRGB[1]}, ${newCellRGB[2]})`
 }
 
 gridSizeButton.addEventListener("click", (event) => {
